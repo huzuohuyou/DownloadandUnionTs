@@ -9,7 +9,9 @@ namespace DownloadandUnionTs.Service
     {
         public My33Service(string[] args)
         {
-            //word = args[0];
+            word = args[0];
+            Console.WriteLine($@"==================================");
+            Console.WriteLine($@"The word is:{word}");
         }
         public override void DownLoadTs(List<string> ts)
         {
@@ -27,10 +29,10 @@ namespace DownloadandUnionTs.Service
             var squeue = new List<int>();
             var index = 0;
             try
-            {
+            { 
                 // 创建一个 StreamReader 的实例来读取文件 
                 // using 语句也能关闭 StreamReader
-                using (StreamReader sr = new StreamReader($@"D:\考研台词\{word}\X_TS文件列表_未清理.txt"))
+                using (StreamReader sr = new StreamReader($@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\{word}\X_TS文件列表_未清理.txt"))
                 {
                     string line;
                     var RegexStr = @"(?<txt>(?<=XHR ).+)";
@@ -64,7 +66,7 @@ namespace DownloadandUnionTs.Service
 
         public override void WriteURLtoFile(string word, List<string> list)
         {
-            var path = $@"D:\考研台词\{word}\Y_TS文件列表_已清理.txt";
+            var path = $@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\{word}\Y_TS文件列表_已清理.txt";
             if (File.Exists(path))
             {
                 File.Delete(path);

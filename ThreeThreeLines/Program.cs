@@ -9,10 +9,10 @@ namespace DownloadandUnionTs
     {
         static void Main(string[] args)
         {
-            //if (args != null && args.Length > 0)
-            //{
+            if (args != null && args.Length > 0)
+            {
                 new My33Service(args).Do();
-            //}
+            }
         }
 
        
