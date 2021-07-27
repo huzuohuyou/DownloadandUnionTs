@@ -4,7 +4,7 @@ namespace DownloadandUnionTs.Service
 {
     public abstract class Abstract33Service : ICanDownLoadTS, ICanDownLoadVTT, ICanGetTsURL, ICanMergeTS, ICanWriteURLtoFile
     {
-        protected string word = "rage";
+        protected string word = "definite";
         public abstract void DownLoadTs(List<string> ts);
         public abstract void DownLoadVTT(string vtt);
         public abstract List<string> GetTsURL();

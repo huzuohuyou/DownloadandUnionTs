@@ -41,8 +41,10 @@ namespace BeiKeTodyWords
 
                     }
                 }
-
-                using (StreamWriter sw = new StreamWriter(@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\B_贝壳今日单词_纯单词.txt"))
+                var onlyWordPaht= @"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\B_贝壳今日单词_纯单词.txt";
+                if (File.Exists(onlyWordPaht))
+                    File.Delete(onlyWordPaht);
+                using (StreamWriter sw = new StreamWriter(onlyWordPaht))
                 {
                     foreach (string s in result)
                     {
