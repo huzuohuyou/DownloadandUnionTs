@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommonService.Words;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace BeiKeTodyWords
 {
@@ -6,7 +8,11 @@ namespace BeiKeTodyWords
     {
         static void Main(string[] args)
         {
-            new BeiKeTodayWordsService().GetTodayWord();
+            IServiceCollection services = new ServiceCollection();
+            services.AddTransient<GetTodayWordsBase>();
+            IServiceProvider provider = services.BuildServiceProvider();
+            var myservice = provider.GetService<GetTodayWordsBase>();
+            myservice.Do();
         }
     }
 }

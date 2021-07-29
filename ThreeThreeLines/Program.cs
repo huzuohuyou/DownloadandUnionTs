@@ -1,5 +1,6 @@
 ﻿using DownloadandUnionTs.Service;
 using ThreeThreeLines.Service;
+using ThreeThreeLines.Service.Lines;
 
 namespace DownloadandUnionTs
 {
@@ -7,6 +8,7 @@ namespace DownloadandUnionTs
     {
         static void Main(string[] args)
         {
+            new MaikeLinesImage().MakeLineImage("stress");
             if (args != null && args.Length > 0)
             {
                 var word =  args[0];

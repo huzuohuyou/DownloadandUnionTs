@@ -32,18 +32,18 @@ namespace ThreeThreeLines.Service
                     if (!string.IsNullOrWhiteSpace(keyLine))
                     {
                         var index = lines.IndexOf(keyLine);
-                        if (index - 3 >= 0)
-                            result.Add(lines[index - 3]);
-                        if (index - 2 >= 0)
-                            result.Add(lines[index - 2]);
+                        //if (index - 3 >= 0)
+                        //    result.Add(lines[index - 3]);
+                        //if (index - 2 >= 0)
+                        //    result.Add(lines[index - 2]);
                         if (index  >= 0)
                             result.Add(lines[index]);
                         if (index + 1 <= lines.Count-1)
                             result.Add(lines[index + 1]);
-                        if (index + 3 <= lines.Count - 1)
-                            result.Add(lines[index + 3]);
-                        if (index + 4 <= lines.Count - 1)
-                            result.Add(lines[index + 4]);
+                        //if (index + 3 <= lines.Count - 1)
+                        //    result.Add(lines[index + 3]);
+                        //if (index + 4 <= lines.Count - 1)
+                        //    result.Add(lines[index + 4]);
                     }
                     #endregion
 

@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeiKeTodyWords", "BeiKeTody
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KaoyanWord", "KaoyanWord\KaoyanWord.csproj", "{BF30B64D-9FDB-458D-8ECF-D4DA1FA2FEB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonService", "CommonService\CommonService.csproj", "{BCCE29FF-3FBD-4486-AF5F-4D962FC11284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Word2DB", "WordDBService\Word2DB.csproj", "{7F693785-8C78-4F9A-AA85-772E6CAE52E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{BF30B64D-9FDB-458D-8ECF-D4DA1FA2FEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF30B64D-9FDB-458D-8ECF-D4DA1FA2FEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF30B64D-9FDB-458D-8ECF-D4DA1FA2FEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCE29FF-3FBD-4486-AF5F-4D962FC11284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCE29FF-3FBD-4486-AF5F-4D962FC11284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCE29FF-3FBD-4486-AF5F-4D962FC11284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCE29FF-3FBD-4486-AF5F-4D962FC11284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F693785-8C78-4F9A-AA85-772E6CAE52E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F693785-8C78-4F9A-AA85-772E6CAE52E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F693785-8C78-4F9A-AA85-772E6CAE52E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F693785-8C78-4F9A-AA85-772E6CAE52E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
