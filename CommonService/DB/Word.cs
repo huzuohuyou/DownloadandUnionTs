@@ -24,8 +24,8 @@ namespace CommonService.DB
         }
         public int ISFRESH { get; set; } = 1;
 
-      
-        public string LINES { get; set; }
+
+        public string LINES { get; set; } = "#";
 
         [SugarColumn(IsIgnore = true)]
         public string LINES2 { get {
