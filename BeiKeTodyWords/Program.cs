@@ -9,9 +9,9 @@ namespace BeiKeTodyWords
         static void Main(string[] args)
         {
             IServiceCollection services = new ServiceCollection();
-            services.AddTransient<GetTodayWordsBase>();
+            services.AddTransient<GetTodayWordsService>();
             IServiceProvider provider = services.BuildServiceProvider();
-            var myservice = provider.GetService<GetTodayWordsBase>();
+            var myservice = provider.GetService<GetTodayWordsService>();
             myservice.Do();
         }
     }

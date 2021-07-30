@@ -59,7 +59,8 @@ namespace CommonService.DB
         }
 
         public static WORD GetWORD(string EN) {
-            return db.Queryable<WORD>().First(it => it.EN==EN);
+             var word=db.Queryable<WORD>().First(it => it.EN==EN);
+            return word;
         }
 
         public static List<WORD> GetAllWORD(string EN)
@@ -75,6 +76,15 @@ namespace CommonService.DB
         public static WORD GetLikelyWORD(string EN)
         {
             return db.Queryable<WORD>().First(it => it.EN.Contains( EN));
+        }
+
+        public static int AllWordCount() {
+            return db.Queryable<WORD>().Where(it => 1 == 1).Count();
+        }
+
+        public static int IKnowWordCount() { 
+            return db.Queryable<WORD>().Where(it =>it.ISIKONWIT==1).Count();
+
         }
     }
 }

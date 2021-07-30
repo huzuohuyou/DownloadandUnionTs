@@ -6,20 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="x64\**" />
+    <Compile Remove="x86\**" />
+    <EmbeddedResource Remove="x64\**" />
+    <EmbeddedResource Remove="x86\**" />
+    <None Remove="x64\**" />
+    <None Remove="x86\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="System.Data.SQLite.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.114.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CommonService\CommonService.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="x64\SQLite.Interop.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="x86\SQLite.Interop.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
