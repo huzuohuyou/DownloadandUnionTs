@@ -13,13 +13,14 @@ namespace CommonService.DB
         public int ISWATCHED { get; set; } = 0;
         public int ISIKONWIT { get; set; } = 0;
         public string DETAIL { get; set; }
-
+        public int HAVEMP4 { get; set; }
+        
         [SugarColumn(IsIgnore = true)]
         public string DETAIL2
         {
             get
             {
-                return $@"{EN}   {DETAIL}";
+                return $@" {DETAIL.Trim()}";
             }
         }
         public int ISFRESH { get; set; } = 1;
@@ -41,5 +42,6 @@ namespace CommonService.DB
         public string WORDGROUP { get; set; } = "英语二";
         public string CREATEDATE { get; set; } = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         public string LASTWATCHDATE { get; set; }
+        public string LASTUPDATEDATE { get; set; }
     }
 }
