@@ -49,7 +49,6 @@ namespace CommonService.DB
         public static void WatcheWord(WORD word)
         {
             word.ISWATCHED = 1;
-            word.ISFRESH = 0;
             word.LASTWATCHDATE = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             UpdateWord(word);
         }
@@ -64,7 +63,7 @@ namespace CommonService.DB
 
         public static List<WORD> GetFreshWrod()
         {
-            return db.Queryable<WORD>().Where(it => it.ISFRESH == 1).ToList();
+            return db.Queryable<WORD>().Where(it => it.HAVEMP4 == 1 && it.ISWATCHED == 0).ToList();
         }
 
         public static WORD GetWORD(string EN)
@@ -80,7 +79,8 @@ namespace CommonService.DB
 
         public static List<WORD> GetIDontKnowWORD()
         {
-            return db.Queryable<WORD>().Where(r => r.ISIKONWIT == 0 &&r.HAVEMP4==1&&r.ISWATCHED==0).ToList();
+            //r.ISIKONWIT == 0 &&
+            return db.Queryable<WORD>().Where(r => r.ISIKONWIT == 0 && r.HAVEMP4==1&&r.ISWATCHED==0).ToList();
         }
 
         public static WORD GetLikelyWORD(string EN)

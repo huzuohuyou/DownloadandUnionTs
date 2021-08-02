@@ -23,7 +23,6 @@ namespace CommonService.DB
                 return $@" {DETAIL.Trim()}";
             }
         }
-        public int ISFRESH { get; set; } = 1;
 
 
         public string LINES { get; set; } = "#";
