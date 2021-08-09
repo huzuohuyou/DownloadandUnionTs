@@ -98,5 +98,11 @@ namespace CommonService.DB
             return db.Queryable<WORD>().Where(it => it.ISIKONWIT == 1).Count();
 
         }
+
+        public static int HasMP4Count()
+        {
+            return db.Queryable<WORD>().Where(it => it.HAVEMP4 == 1).Count();
+
+        }
     }
 }
