@@ -83,6 +83,12 @@ namespace CommonService.DB
             return db.Queryable<WORD>().Where(r => r.ISIKONWIT == 0 && r.HAVEMP4==1&&r.ISWATCHED==0).ToList();
         }
 
+        public static List<WORD> GetEmpyMP4WORD()
+        {
+            //r.ISIKONWIT == 0 &&
+            return db.Queryable<WORD>().Where(r =>  r.HAVEMP4 == 0).ToList();
+        }
+
         public static WORD GetLikelyWORD(string EN)
         {
             return db.Queryable<WORD>().First(it => it.EN.Contains(EN));

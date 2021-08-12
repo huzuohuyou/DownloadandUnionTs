@@ -32,7 +32,7 @@ namespace DownloadandUnionTs.Service
             { 
                 // 创建一个 StreamReader 的实例来读取文件 
                 // using 语句也能关闭 StreamReader
-                using (StreamReader sr = new StreamReader($@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\{word}\X_TS文件列表_未清理.txt"))
+                using (StreamReader sr = new StreamReader($@"D:\Gitee\DramaEnglishMedia\Words\{word}\X_TS文件列表_未清理.txt"))
                 {
                     string line;
                     var RegexStr = @"(?<txt>(?<=XHR ).+)";
@@ -66,7 +66,7 @@ namespace DownloadandUnionTs.Service
 
         public override void WriteURLtoFile(string word, List<string> list)
         {
-            var path = $@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\{word}\Y_TS文件列表_已清理.txt";
+            var path = $@"D:\Gitee\DramaEnglishMedia\Words\{word}\Y_TS文件列表_已清理.txt";
             if (File.Exists(path))
             {
                 File.Delete(path);
