@@ -15,7 +15,7 @@ namespace CommonService.Words
             {
                 // 创建一个 StreamReader 的实例来读取文件 
                 // using 语句也能关闭 StreamReader
-                using (StreamReader sr = new StreamReader(@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\A_贝壳今日单词_未过滤.txt"))
+                using (StreamReader sr = new StreamReader(@"D:\Gitee\DramaEnglishMedia\Words\A_贝壳今日单词_未过滤.txt"))
                 {
                     string line;
                     var en = @"^\w+$";
@@ -58,7 +58,7 @@ namespace CommonService.Words
             var result = new List<string>();
             try
             {
-                var onlyWordPaht = @"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\B_贝壳今日单词_纯单词.txt";
+                var onlyWordPaht = @"D:\Gitee\DramaEnglishMedia\Words\B_贝壳今日单词_纯单词.txt";
                 if (File.Exists(onlyWordPaht))
                     File.Delete(onlyWordPaht);
                 using (StreamWriter sw = new StreamWriter(onlyWordPaht))
@@ -90,17 +90,20 @@ namespace CommonService.Words
                 foreach (var item in wordsdetail)
                 {
                     var word = item.Split('|')[0];
-                    var dir = $@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\{word}\";
-                    var path = $@"D:\GitHub\DramaEnglish\DramaEnglish.WPF\Words\{word}\{word}.txt";
+                    var dir = $@"D:\Gitee\DramaEnglishMedia\Words\{word}\";
+                    var path = $@"D:\Gitee\DramaEnglishMedia\Words\{word}\{word}.txt";
                     if (!Directory.Exists(dir))
                         Directory.CreateDirectory(dir);
-                    using (StreamWriter sw = new StreamWriter(path))
-                    {
+                    if (!File.Exists(path)) {
+                        using (StreamWriter sw = new StreamWriter(path))
+                        {
 
-                        Console.WriteLine(item);
-                        sw.WriteLine($@"{word}    {item.Split('|')[1]}");
+                            Console.WriteLine(item);
+                            sw.WriteLine($@"{word}    {item.Split('|')[1]}");
 
+                        }
                     }
+                       
                 }
 
             }
